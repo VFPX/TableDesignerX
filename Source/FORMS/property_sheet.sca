@@ -15,13 +15,14 @@ VERSION =   3.00[END RESERVED1]
 [BASECLASS] dataenvironment
 [OBJNAME] Dataenvironment
 [START PROPERTIES]
-Left = 133
 Top = 128
+Left = 133
 Width = 523
 Height = 322
 AutoOpenTables = .F.
 AutoCloseTables = .F.
 InitialSelectedAlias = "xproperties_sheet"
+DataSource = .NULL.
 Name = "Dataenvironment"
 [END PROPERTIES]
 [START RESERVED2]
@@ -39,10 +40,10 @@ Name = "Dataenvironment"
 Top = 0
 Left = 0
 Height = 297
-Width = 424
+Width = 532
 DoCreate = .T.
 Caption = "Extended Property Sheet"
-WindowType = 1
+WindowType = 0
 BackColor = 192,192,192
 Name = "Form1"
 [END PROPERTIES]
@@ -50,8 +51,12 @@ Name = "Form1"
 PROCEDURE Init
 lParameters oTableManager,xPrpFld,cXproperty
 thisform.tablemanager=oTableManager
+thisform.tablemanager.register_edit_form(this)
 ThisForm.TableFieldsGrid.Column6.controlsource=xPrpFld
 ThisForm.TableFieldsGrid.Column6.Header1.caption=cXproperty
+ENDPROC
+PROCEDURE QueryUnload
+thisform.tablemanager.CheckForFieldChanges()
 ENDPROC
 [END METHODS]
 [START RESERVED3]
@@ -66,38 +71,17 @@ tablemanager underlying engine
 [OBJNAME] Command4
 [PARENT] Form1
 [START PROPERTIES]
-Top = 270
-Left = 291
+Top = 269
+Left = 429
 Height = 23
-Width = 63
-Caption = "\<Save"
+Width = 98
+Caption = "Return "
 TabIndex = 2
 Name = "Command4"
 [END PROPERTIES]
 [START METHODS]
 PROCEDURE Click
-Thisform.release
-ENDPROC
-[END METHODS]
-
-[ RECORD]
-[PLATFORM] WINDOWS 
-[UNIQUEID] _08L0PJG62
-[CLASS] commandbutton
-[BASECLASS] commandbutton
-[OBJNAME] Command5
-[PARENT] Form1
-[START PROPERTIES]
-Top = 270
-Left = 357
-Height = 23
-Width = 63
-Caption = "\<Cancel"
-TabIndex = 3
-Name = "Command5"
-[END PROPERTIES]
-[START METHODS]
-PROCEDURE Click
+thisform.tablemanager.CheckForFieldChanges()
 Thisform.release
 ENDPROC
 [END METHODS]
@@ -125,7 +109,7 @@ RowHeight = 17
 ScrollBars = 2
 TabIndex = 1
 Top = 3
-Width = 420
+Width = 527
 ForeColor = 0,0,0
 GridLineColor = 192,192,192
 Name = "TableFieldsGrid"
@@ -167,7 +151,7 @@ Column5.Name = "Column5"
 Column6.FontBold = .T.
 Column6.FontName = "Arial"
 Column6.FontSize = 9
-Column6.Width = 137
+Column6.Width = 239
 Column6.ForeColor = 0,0,0
 Column6.Name = "Column6"
 [END PROPERTIES]
