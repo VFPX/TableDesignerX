@@ -36,8 +36,8 @@ Name = "Dataenvironment"
 [START PROPERTIES]
 Top = 8
 Left = 12
-Height = 339
-Width = 594
+Height = 337
+Width = 592
 DoCreate = .T.
 ShowTips = .T.
 Caption = "Table Design Center "
@@ -183,6 +183,7 @@ Top = 68
 Left = 0
 Height = 269
 Width = 592
+Anchor = 15
 SpecialEffect = 0
 Name = "Shape2"
 [END PROPERTIES]
@@ -215,6 +216,7 @@ Top = 308
 Left = 322
 Height = 22
 Width = 138
+Anchor = 512
 Caption = "Modify Table"
 Name = "ModiStruBttn"
 [END PROPERTIES]
@@ -235,6 +237,7 @@ ENDPROC
 [START PROPERTIES]
 FontBold = .F.
 FontSize = 9
+Anchor = 15
 Height = 179
 Left = 4
 Top = 125
@@ -289,6 +292,7 @@ Top = 308
 Left = 470
 Height = 23
 Width = 112
+Anchor = 512
 Caption = "Close All Sessions"
 Name = "Command2"
 [END PROPERTIES]
@@ -319,6 +323,7 @@ Top = 308
 Left = 164
 Height = 22
 Width = 135
+Anchor = 512
 Caption = "Create Table "
 Name = "Command3"
 [END PROPERTIES]
@@ -341,6 +346,7 @@ Top = 308
 Left = 7
 Height = 22
 Width = 135
+Anchor = 512
 Caption = "Create/Open Database"
 Name = "Command4"
 [END PROPERTIES]
@@ -470,7 +476,7 @@ AutoSize = .F.
 Caption = " Recently Modified"
 Height = 15
 Left = 5
-Top = 2
+Top = 3
 Width = 103
 Name = "Label3"
 [END PROPERTIES]
@@ -514,6 +520,6 @@ Name = "Label5"
 [UNIQUEID] RESERVED  
 [START PROPERTIES]
 Arial, 0, 9, 5, 15, 12, 32, 3, 0
-Arial, 0, 8, 5, 14, 11, 29, 3, 0
+Arial, 0, 8, 5, 14, 11, 30, 3, 0
 [END PROPERTIES]
 [EOF]
