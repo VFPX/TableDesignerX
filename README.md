@@ -2,11 +2,11 @@
 
 **Project Manager**: Srdjan Djordjevic, Bhavbhuti Nathwani
 
-Project moved to deprecated status in August 2012, but Srdjan asked to be established as the project manager. The project is now in planning status (September 2012) even though there is code to try. Reason for planning status: Srdjan is not able to move the project forward until time frees up. He is working on finishing  Report Sculptor.
-
 The Table Designer X project seeks to provide VFP developers with a new and enhanced table designer dialog for the VFP IDE. While it is still in the early planning stage of development, there's few VFP developers that haven't wished for a better table designer at one time or another. So, download the project's initial source code release and let the lively discussions, good ideas, and developing begin.
 
 Anyone wanting to help out with this project is urged to contact Bhavbhuti or join one of the ongoing discussions regarding Table Designer X here on VFPX.
+
+**Note**: The project moved to deprecated status in August 2012, but Srdjan asked to be established as the project manager. The project is now in planning status (September 2012) even though there is code to try. Reason for planning status: Srdjan is not able to move the project forward until time frees up. He is working on finishing Report Sculptor.
 
 ## First release goals
 * Get over the Modal limitation (Non-Modal form - _status: partially achieved_)
